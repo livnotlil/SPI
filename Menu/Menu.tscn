@@ -1,6 +1,5 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Images/tie.png" type="Texture" id=1]
 [ext_resource path="res://Menu/PaletteMosaic-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Menu/buttonFont.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Menu/Start Game Button.gd" type="Script" id=4]
@@ -8,6 +7,10 @@
 [sub_resource type="DynamicFont" id=1]
 size = 55
 font_data = ExtResource( 2 )
+
+[sub_resource type="StreamTexture" id=2]
+flags = 4
+load_path = "res://.import/tie.png-98a1f574e2b6e56c8b27c3eeddca894b.stex"
 
 [node name="MenuMenu" type="Control"]
 anchor_right = 1.0
@@ -50,7 +53,7 @@ size_flags_vertical = 3
 [node name="Screenshot" type="TextureRect" parent="Layout/Main"]
 margin_right = 351.0
 margin_bottom = 618.0
-texture = ExtResource( 1 )
+texture = SubResource( 2 )
 
 [node name="Buttons" type="VBoxContainer" parent="Layout/Main"]
 margin_left = 355.0
