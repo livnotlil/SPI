@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Button.gd" type="Script" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Layout" type="VBoxContainer" parent="."]
+margin_left = 558.47
+margin_top = 320.762
+margin_right = 671.47
+margin_bottom = 360.762
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Layout"]
+margin_right = 113.0
+margin_bottom = 14.0
+text = "Game Over"
+
+[node name="Button" type="Button" parent="Layout"]
+margin_top = 18.0
+margin_right = 113.0
+margin_bottom = 38.0
+text = "Return To Menu"
+script = ExtResource( 1 )
+[connection signal="pressed" from="Layout/Button" to="Layout/Button" method="_on_Button_pressed"]
