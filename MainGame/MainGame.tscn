@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Audio/backgroundMusic.wav" type="AudioStream" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -6,9 +6,10 @@
 [ext_resource path="res://MainGame/MainGame.gd" type="Script" id=4]
 [ext_resource path="res://Enemy/Enemies.gd" type="Script" id=5]
 [ext_resource path="res://ExampleCode.gd" type="Script" id=6]
+[ext_resource path="res://Images/dei37tm-23cb390a-b842-4e31-9428-f6c8b7126e0b.png" type="Texture" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 20.9622, 385.681 )
+extents = Vector2( 21.2, 385.681 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 662.058, 10 )
@@ -23,6 +24,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 countdownMax = 50
+
+[node name="dei37tm-23cb390a-b842-4e31-9428-f6c8b7126e0b" type="Sprite" parent="."]
+position = Vector2( 631.074, 374.885 )
+scale = Vector2( 1.00046, 1.12009 )
+texture = ExtResource( 7 )
 
 [node name="HUD" type="HBoxContainer" parent="."]
 margin_right = 40.0
@@ -59,7 +65,7 @@ text = "0"
 position = Vector2( -1.53629, 369.479 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Border_Left"]
-position = Vector2( -5.37704, -0.768158 )
+position = Vector2( 13.6631, -0.768158 )
 shape = SubResource( 1 )
 
 [node name="Border_Right" type="Area2D" parent="." groups=[
@@ -68,7 +74,7 @@ shape = SubResource( 1 )
 position = Vector2( 1287.42, 368.711 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Border_Right"]
-position = Vector2( -5.37704, -0.768158 )
+position = Vector2( -40.2839, 0.818512 )
 shape = SubResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
@@ -82,7 +88,7 @@ position = Vector2( 646.934, -31.955 )
 [node name="TopCollider" type="CollisionShape2D" parent="Border_Top" groups=[
 "top",
 ]]
-position = Vector2( 0, 1 )
+position = Vector2( 11.1068, 43.8402 )
 shape = SubResource( 2 )
 
 [node name="Border_Bottom" type="KinematicBody2D" parent="." groups=[
@@ -93,7 +99,7 @@ position = Vector2( 646.934, 748.484 )
 [node name="TopCollider" type="CollisionShape2D" parent="Border_Bottom" groups=[
 "top",
 ]]
-position = Vector2( 0, 1 )
+position = Vector2( 1.58667, -11.6934 )
 shape = SubResource( 2 )
 
 [node name="Enemies" type="Node2D" parent="."]
