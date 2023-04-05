@@ -141,4 +141,13 @@ gantt
     section Design
     Project Overview:05-04-23, 1d
     Project Plan: 05-04-23, 24-04-23
+
+    section Implemtation
+    UI:05-04-23, 1d
+    Multiple Enemies:05-04-23, 1d
+
+    Testing:05-04-23, 1d
+
+    section Project Managment
+    Final Submission: 07-06-23, 1d
  ```
