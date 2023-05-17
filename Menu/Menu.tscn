@@ -82,9 +82,9 @@ margin_right = 1280.0
 margin_bottom = 720.0
 
 [node name="Label" type="Label" parent="Layout/Credits"]
-margin_right = 179.0
+margin_right = 201.0
 margin_bottom = 14.0
-text = "Copyright Ryan Cather 2023."
+text = "Copyright Donny The Dog 2023."
 
 [node name="signpost" type="Sprite" parent="."]
 position = Vector2( 968.832, 467.5 )
@@ -109,7 +109,7 @@ __meta__ = {
 }
 
 [node name="signpost3" type="Sprite" parent="."]
-position = Vector2( 968.832, 324.303 )
+position = Vector2( 970.339, 321.288 )
 scale = Vector2( 1, 0.636055 )
 texture = ExtResource( 8 )
 offset = Vector2( -27.2078, 64.1629 )
@@ -151,10 +151,10 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="."]
-margin_left = 862.047
-margin_top = 335.081
-margin_right = 938.047
-margin_bottom = 349.081
+margin_left = 860.54
+margin_top = 330.559
+margin_right = 936.54
+margin_bottom = 344.559
 rect_scale = Vector2( 2.51005, 2.77744 )
 text = "Adventure"
 uppercase = true

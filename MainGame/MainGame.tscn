@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Audio/backgroundMusic.wav" type="AudioStream" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Enemy/Enemies.gd" type="Script" id=5]
 [ext_resource path="res://ExampleCode.gd" type="Script" id=6]
 [ext_resource path="res://Images/dei37tm-23cb390a-b842-4e31-9428-f6c8b7126e0b.png" type="Texture" id=7]
+[ext_resource path="res://MainGame/heart pixel art 254x254.png" type="Texture" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 21.2, 385.681 )
@@ -207,3 +208,22 @@ stream = ExtResource( 1 )
 autoplay = true
 
 [node name="Enemies2" type="Node2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="CanvasLayer"]
+
+[node name="heart pixel art 254x254" type="Sprite" parent="CanvasLayer/AnimatedSprite"]
+position = Vector2( 980.518, 692.736 )
+scale = Vector2( 0.216658, 0.181051 )
+texture = ExtResource( 8 )
+
+[node name="heart pixel art 254x255" type="Sprite" parent="CanvasLayer/AnimatedSprite"]
+position = Vector2( 1052.87, 694.243 )
+scale = Vector2( 0.216658, 0.181051 )
+texture = ExtResource( 8 )
+
+[node name="heart pixel art 254x256" type="Sprite" parent="CanvasLayer/AnimatedSprite"]
+position = Vector2( 1120.7, 692.736 )
+scale = Vector2( 0.216658, 0.181051 )
+texture = ExtResource( 8 )
