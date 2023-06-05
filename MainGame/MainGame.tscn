@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Audio/backgroundMusic.wav" type="AudioStream" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -14,6 +14,14 @@ extents = Vector2( 21.2, 385.681 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 662.058, 10 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [node name="SpaceInvaders" type="Control"]
 margin_left = -0.768188
@@ -212,6 +220,7 @@ autoplay = true
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="CanvasLayer"]
+frames = SubResource( 3 )
 
 [node name="heart pixel art 254x254" type="Sprite" parent="CanvasLayer/AnimatedSprite"]
 position = Vector2( 980.518, 692.736 )

@@ -9,12 +9,16 @@ func _ready():
 	currentTimer = countdownMax
 	$HUD/Countdown.text = str(currentTimer)
 	
-	while currentTimer > 0:
+#	if GlobalVariables.playerhealth > 0 && currentTimer > 0:
+	while GlobalVariables.playerhealth > 0 && currentTimer > 0:
 		yield(get_tree().create_timer(1.0), "timeout")
 		$HUD/Countdown.text = str(currentTimer)
 		currentTimer = currentTimer - 1
 		print(currentTimer)
-	print("Game Over")
+		#print("Game Over")
+		#get_tree().change_scene("res://Losescrene.tscn")
+		#GlobalVariables.bulletInstanceCount = 0
+#	else:
 	get_tree().change_scene("res://Losescrene.tscn")
 	GlobalVariables.bulletInstanceCount = 0
 

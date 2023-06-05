@@ -12,3 +12,4 @@ var scoringInformation = {
 }
 
 var automaticFiring = false
+var playerhealth = 3
