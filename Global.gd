@@ -11,5 +11,6 @@ var scoringInformation = {
 	"highScorePlayersName" : "Winner"
 }
 
+var Player
 var automaticFiring = false
 var playerhealth = 3

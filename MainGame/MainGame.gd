@@ -23,6 +23,7 @@ func _ready():
 	GlobalVariables.bulletInstanceCount = 0
 
 func _process(delta):
+	$HUD/Health.update_health($Player.health)
 	$HUD/CurrentScore.text = str(GlobalVariables.scoringInformation["currentScore"])
 	$HUD/CurrentScore.text = str(GlobalVariables.scoringInformation["currentScore"])
 	if get_tree().get_nodes_in_group("enemy").size() == 0:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Audio/backgroundMusic.wav" type="AudioStream" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://ExampleCode.gd" type="Script" id=6]
 [ext_resource path="res://Images/dei37tm-23cb390a-b842-4e31-9428-f6c8b7126e0b.png" type="Texture" id=7]
 [ext_resource path="res://MainGame/heart pixel art 254x254.png" type="Texture" id=8]
+[ext_resource path="res://Images/Hearts/hud_heartFull.png" type="Texture" id=9]
+[ext_resource path="res://MainGame/Health.gd" type="Script" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 21.2, 385.681 )
@@ -48,25 +50,54 @@ __meta__ = {
 }
 
 [node name="Countdown" type="Label" parent="HUD"]
-margin_top = 13.0
-margin_bottom = 27.0
+margin_top = 15.0
+margin_bottom = 29.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="CurrentScoreLabel" type="Label" parent="HUD"]
 margin_left = 4.0
-margin_top = 13.0
+margin_top = 15.0
 margin_right = 90.0
-margin_bottom = 27.0
+margin_bottom = 29.0
 text = "Current Score"
 
 [node name="CurrentScore" type="Label" parent="HUD"]
 margin_left = 94.0
-margin_top = 13.0
+margin_top = 15.0
 margin_right = 102.0
-margin_bottom = 27.0
+margin_bottom = 29.0
 text = "0"
+
+[node name="Health" type="HBoxContainer" parent="HUD"]
+margin_left = 106.0
+margin_right = 273.0
+margin_bottom = 45.0
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="1" type="TextureRect" parent="HUD/Health"]
+margin_right = 53.0
+margin_bottom = 45.0
+texture = ExtResource( 9 )
+stretch_mode = 3
+
+[node name="2" type="TextureRect" parent="HUD/Health"]
+margin_left = 57.0
+margin_right = 110.0
+margin_bottom = 45.0
+texture = ExtResource( 9 )
+stretch_mode = 3
+
+[node name="3" type="TextureRect" parent="HUD/Health"]
+margin_left = 114.0
+margin_right = 167.0
+margin_bottom = 45.0
+texture = ExtResource( 9 )
+stretch_mode = 3
 
 [node name="Border_Left" type="Area2D" parent="." groups=[
 "left",
@@ -220,6 +251,7 @@ autoplay = true
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="CanvasLayer"]
+visible = false
 frames = SubResource( 3 )
 
 [node name="heart pixel art 254x254" type="Sprite" parent="CanvasLayer/AnimatedSprite"]

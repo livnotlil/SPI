@@ -1,22 +1,24 @@
 extends KinematicBody2D
 
 var movement_speed = 200
+export (int) var health = 3
 var bulletSource = preload ("res://Bullet/Bullet.tscn")
 func _ready():
 	set_process(true)
 	set_physics_process(true)
+	GlobalVariables.Player = self
 
 func _process(delta):
 	if GlobalVariables.automaticFiring:
 		if Input.is_action_just_pressed("fire"):
 			if GlobalVariables.bulletInstanceCount < 3:
 				var bulletInstance = bulletSource.instance()
-				bulletInstance.position = Vector2(position.x, position.y-20)
+				bulletInstance.position = Vector2(position.x, position.y-80)
 				get_tree().get_root().add_child(bulletInstance)
 	elif Input.is_action_just_pressed("fire"):
 		if GlobalVariables.bulletInstanceCount < 3:
 			var bulletInstance = bulletSource.instance()
-			bulletInstance.position = Vector2(position.x, position.y-20)
+			bulletInstance.position = Vector2(position.x, position.y-80)
 			get_tree().get_root().add_child(bulletInstance)
 		
 func _physics_process(delta):
