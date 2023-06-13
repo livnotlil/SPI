@@ -28,6 +28,5 @@ func _process(delta):
 	yield(get_tree().create_timer(my_random_number), "timeout")
 	if GlobalVariables.enemyBulletInstanceCount < 5:
 		var bulletInstance = bullet.instance()
-		
 		bulletInstance.position = Vector2(global_position.x, global_position.y+20)
 		get_tree().get_root().add_child(bulletInstance)
