@@ -20,6 +20,7 @@ func _process(delta):
 			var bulletInstance = bulletSource.instance()
 			bulletInstance.position = Vector2(position.x, position.y-80)
 			get_tree().get_root().add_child(bulletInstance)
+#controls firerate and bullet count of player
 		
 func _physics_process(delta):
 	if Input.is_action_pressed("ui_left"):
@@ -32,3 +33,4 @@ func _physics_process(delta):
 		move_and_collide(Vector2(0,-movement_speed * delta))
 	if Input.is_action_pressed("ui_down"):
 		move_and_collide(Vector2(0,movement_speed * delta))
+#controls player movement, depending on the set ui_? in settings

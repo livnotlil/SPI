@@ -49,30 +49,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Countdown" type="Label" parent="HUD"]
-margin_top = 15.0
-margin_bottom = 29.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="CurrentScoreLabel" type="Label" parent="HUD"]
-margin_left = 4.0
-margin_top = 15.0
-margin_right = 90.0
-margin_bottom = 29.0
-text = "Current Score"
-
-[node name="CurrentScore" type="Label" parent="HUD"]
-margin_left = 94.0
-margin_top = 15.0
-margin_right = 102.0
-margin_bottom = 29.0
-text = "0"
-
 [node name="Health" type="HBoxContainer" parent="HUD"]
-margin_left = 106.0
-margin_right = 273.0
+margin_right = 167.0
 margin_bottom = 45.0
 script = ExtResource( 10 )
 __meta__ = {
@@ -98,6 +76,29 @@ margin_right = 167.0
 margin_bottom = 45.0
 texture = ExtResource( 9 )
 stretch_mode = 3
+
+[node name="Countdown" type="Label" parent="HUD"]
+margin_left = 171.0
+margin_top = 15.0
+margin_right = 171.0
+margin_bottom = 29.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CurrentScoreLabel" type="Label" parent="HUD"]
+margin_left = 175.0
+margin_top = 15.0
+margin_right = 261.0
+margin_bottom = 29.0
+text = "Current Score"
+
+[node name="CurrentScore" type="Label" parent="HUD"]
+margin_left = 265.0
+margin_top = 15.0
+margin_right = 273.0
+margin_bottom = 29.0
+text = "0"
 
 [node name="Border_Left" type="Area2D" parent="." groups=[
 "left",

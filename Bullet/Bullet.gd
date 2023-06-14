@@ -17,3 +17,5 @@ func _physics_process(delta):
 			GlobalVariables.scoringInformation["currentScore"] +=10
 		queue_free()
 		GlobalVariables.bulletInstanceCount -= 1
+#If player bullet collides with enemy, remove enemy and add +10 points to current score. 
+# Then remove bullet

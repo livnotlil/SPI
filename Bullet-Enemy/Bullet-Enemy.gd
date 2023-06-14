@@ -27,3 +27,4 @@ func _physics_process(delta):
 			GlobalVariables.enemyBulletInstanceCount -= 1
 			#print("Enemy Bullets: ", GlobalVariables.enemyBulletInstanceCount)
 			
+# if enemy bullet hits player, negate 1 hp and remove bullet, else get rid of bullet
